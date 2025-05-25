@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "caffeinedungeons",
+  "version": "0.0.1",
+  "name": "Caffeine Dungeons",
+  "description": "Mod for dungeondodge that adds things",
+  "authors": ["Jakacraft"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/caffeinedungeons/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.jakacraft.caffeinedungeons.client.CaffeinedungeonsDataGenerator"
+    ],
+    "client": [
+      "com.jakacraft.caffeinedungeons.client.CaffeinedungeonsClient"
+    ],
+    "main": [
+      "com.jakacraft.caffeinedungeons.Caffeinedungeons"
+    ]
+  },
+  "mixins": [
+    "caffeinedungeons.mixins.json",
+    {
+      "config": "caffeinedungeons.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": "*",
+    "minecraft": "1.21.1"
+  }
+}
