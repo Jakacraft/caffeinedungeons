@@ -10,11 +10,15 @@
   "icon": "assets/caffeinedungeons/icon.png",
   "environment": "client",
   "entrypoints": {
+    "modmenu": [
+      "com.jakacraft.caffeinedungeons.modmenuintergration"
+    ],
     "fabric-datagen": [
       "com.jakacraft.caffeinedungeons.client.CaffeinedungeonsDataGenerator"
     ],
     "client": [
-      "com.jakacraft.caffeinedungeons.client.CaffeinedungeonsClient"
+      "com.jakacraft.caffeinedungeons.client.CaffeinedungeonsClient",
+      "com.jakacraft.PetDisplay"
     ],
     "main": [
       "com.jakacraft.caffeinedungeons.Caffeinedungeons"
@@ -30,6 +34,7 @@
   "depends": {
     "fabricloader": ">=0.15.11",
     "fabric": "*",
-    "minecraft": "1.21.1"
+    "minecraft": "1.21.1",
+    "cloth-config": "*"
   }
 }
